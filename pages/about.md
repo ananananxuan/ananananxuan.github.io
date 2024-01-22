@@ -1,17 +1,19 @@
 ---
 layout: mypost
-title: 关于我
+title: About me
 ---
 
-> Hello, This is a blog for me to record something I'm going to learn.
+Hello, I majored in veterinary medicine for my undergraduate studies and studied biology for my master's degree. I hope to transition into coding through my own efforts. 
+
+This is a blog to record my learning process
 
 
 
-## 相关技能
 
 
 
-## 联系我
+
+## Contact me
 
 - Email&nbsp;: [hax3417@163.com](mailto:hax3417@163.com)
 
