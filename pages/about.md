@@ -3,12 +3,11 @@ layout: mypost
 title: About me
 ---
 
-Hello, I majored in veterinary medicine for my undergraduate studies and studied biology for my master's degree. I hope to transition into coding through my own efforts. 
+## About me and the Blog
 
-This is a blog to record my learning process
+ - Hello, I majored in veterinary medicine for my undergraduate studies and studied biology for my master's degree. I hope to transition into coding through my own efforts. 
 
-
-
+ - This is a blog to record my learning process
 
 
 
