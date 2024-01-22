@@ -3,11 +3,9 @@ layout: mypost
 title: 关于我
 ---
 
-> Hello 陌生人，欢迎访问 TMaize Blog
+> Hello, This is a blog for me to record something I'm going to learn.
 
-该博客托管于 GitHub Page，国内解析到腾讯云对象存储，以保证国内外的访问速度，留言页面使用腾讯的“吐个槽”
 
-主题是自己写的，见[tmaize-blog](https://github.com/TMaize/tmaize-blog)，喜欢的话可以给个小星星。另外欢迎添加友链，在[留言板](chat.html)留言即可
 
 ## 相关技能
 
@@ -17,6 +15,6 @@ title: 关于我
 
 ## 联系我
 
-- Email&nbsp;: [1772314831@qq.com](mailto:1772314831@qq.com)
+- Email&nbsp;: [hax3417@163.com](mailto:hax3417@163.com)
 
-- GitHub: [https://github.com/tmaize](https://github.com/tmaize)
+- GitHub: [https://github.com/ananananxuan](https://github.com/ananananxuan)
