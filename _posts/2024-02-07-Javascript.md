@@ -1,0 +1,223 @@
+---
+layout: mypost
+title: Javascript
+categories: [前端]
+---
+Javascript
+
+组成：ECMAscript+Web API（DOM+BOM）
+
+其中ECMAscript规定了js基础语法的核心知识，包括：变量、分支语句、循环语句、对象
+
+
+
+Web APIs：DOM用于操作文档，对页面元素进行移动、大小、添加删除操作等；BOM用于操作浏览器，比如页面弹窗，检测窗口宽度、存储数据到浏览器
+
+书写位置：
+
+1.内联 
+
+<button onclick="alert('逗你玩~~'）">点击我月薪过万</button>
+
+2.内部
+
+写在</body>上面,<script>xxx</script>
+
+3.外部
+
+新建js文件，然后写在</body>上面，
+
+<script sr c=""></script>
+
+js中的注释语句
+
+单行注释
+
+// 嘻嘻嘻嘻嘻嘻嘻嘻  快捷键ctrl+/
+
+块注释
+
+/* 嘻嘻嘻嘻嘻嘻嘻嘻*/  快捷键shift+alt+a
+
+js中书写语句
+
+输出
+
+1.document.write
+
+<script>
+
+	document.write("xxxx")
+
+	document.write("<h1>一级标题</h1>")
+
+</script>
+
+2.alert 页面弹出警示语句
+
+<script>
+
+	alert("一级标题")
+
+</script>
+
+3.控制台输出语句
+
+console.log("xxx")
+
+输入
+
+3.输入语法
+
+prompt("请输入您的年龄：")
+
+声明变量
+
+let age=18
+
+age=19
+
+let age=18，uname=“张三”
+
+console.log(age, uname)
+
+
+
+
+
+
+
+
+
+在vscode中直接创建一个html为后缀的文件，直接英文! + enter回车键即可生成创建网页的主体部分<br />
+
+<h3>基本知识点：</h3>
+1.定义：html5是一种描述网页的语言，被称为超文本标记语言，后缀以html结尾<br />
+```
+双标签<html> </html> 
+单标签<img>
+```
+2.基本骨架解释<br />
+①DOCTYPE是document type（文档类型）的缩写。<br />
+<!DOCTYPE html> 其中的!DOCTYPE位于标签<html>之前，避免浏览器出现怪异模式<br />
+②最基本的骨架
+```
+<html>
+    <head>
+    </head>
+    <body>
+    </body>
+</html>
+```
+①head标签用于定义文档的头部。文档的头部描述了文档的各种属性和信息，包括文档的标题、在 Web 中的位置以及和其他文档的关系等。绝大多数文档头部包含的数据都不会真正作为内容显示给读者。 <br />
+
+②body 元素定义文档的主体body 元素包含文档的所有内容比如文本、超链接、图像、表格和列表等等。它会直接在页面中显示出来，也就是用户可以直观看到的内容，可定义文档的标题。<br /> 
+
+③title标签是 <head>标签中唯一必须要求包含的东西，就是说写head一定要写title
+title 的增加有利于SEO优化它显示在浏览器窗口的标题栏或状态栏上,SEO是搜索引擎优化的英文缩写。通过对网站内容调整，满足搜索引擎的排名需求<br />
+
+④meta标签用来描述一个HTML网页文档的属性，关键词等，例如:charset="uf-8"是说当前使用的是 utf-8 编码格在开发中我们经常会看到 utf-8，或是 gbk ，这些都是编码格式,通常使用 utf-8 。<br />
+```
+<h1>一级标题</h1>
+<h6>六级标题</h6> 
+自动生成六级标签h$*6
+可以在标签中添加属性：align="left"/corner/right" 
+eg: '<h1 align="corner">'一级标题</h1>
+```
+<h3>段落、换行、水平线</h3>
+```
+<p>段落</p>  双标签
+<br /> 换行  单标签
+<hr/> 创建水平线 单标签 
+水平线可以设置颜色属性,长度属性，高度属性，对齐方式 color="greeen"width="300px"size="5px"align="left/right"
+```
+<h3>图片</h3> 
+```
+<img> 单标签 
+<img src="1.jpg">
+```
+需要图片和html在同一个文件夹里 
+其中src表示路径，alt表示图像的替代文本，width表示宽度，title表示鼠标悬停在图片上的提示
+
+<em>路径：</em>绝对路径（电脑的盘符存储与访问的具体地址，最完整的那种）、相对路径（子级关系/ 、父级关系../、同级关系可直接写）、网络路径
+
+<h3>标签之超文本链接</h3>
+```
+<a href="url">点击跳转内容</a>
+```
+ 可以通过css去调整超链接的蓝紫色样式
+
+<h3>文本标签</h3>
+```
+<em>xxx</em>强调语气,略微斜体
+<i>xxx</i>斜体
+<b>xxx</b>加粗
+<strong>xxx</strong>加粗加大一点点
+<span>xxx</span>
+<del>xxx</del>
+```
+
+<h3>有序列表</h3>
+ 默认1.2.3 通过属性调整type=“a/b/i/I” 切换样式
+ ```
+<ol>
+    <li>xxx</li>
+</ol>
+```
+<h3>无序列表 </h3>
+默认小圆点 type=“disc实心圆/circle空心圆/square/none”
+```
+<ul>
+    <li>xxx</li>
+</ul>
+```
+快捷键 ul>li*标签数量
+
+<h3>表格</h3>
+```
+<table>
+    <tr>(行)
+        <td>单元格</td>（列）
+    </tr>
+
+    <tr>
+        <td>单元格</td>
+    </tr>
+</table>
+```
+
+快捷键table>tr*4>td*3{单元格}<br />
+表格常用属性 border=“1” 边框和像素 width=“400px” height=“200px”<br />
+
+<srong>表格单元格合并</srong>
+水平合并保留左边删除右边colspan <td colspan="2">单元格</td> <br />
+垂直合并保留上边删除下边rowspan <td rowspan="2">单元格</td> <br />
+
+<h3>表单</h3>
+form表单包括表单标签、表单域（输入框）、表单按钮（button），用来给用户填写信息，和用户建立交互，比如登录注册,包括登录框和提交按钮（属于表单的控件）
+```
+<form>
+   用户名:<input type="text"/"password"> #框
+    <input type="submit" value="登录"> #按钮
+</form>
+```
+
+表单的属性：action=“url” 传给服务器的地址
+name = “”
+method = “get/post”
+
+<h3>块级元素和行内元素</h3>
+
+<h3>分块</h3>
+增加每一块的清晰度
+```
+<div>主导航</div>
+<div>中间行</div>
+new：
+<header></header>头部
+<nav></nav>导航
+<section></section> 定义文档中的节,比如章节、页眉、页脚
+<aside></aside>侧边栏
+<footer></footer>脚部
+<article></article>代表一个独立的、完整的相关内容块,例如一篇完整的论坛帖子，一篇博客文章，一个用户评论等
+```
