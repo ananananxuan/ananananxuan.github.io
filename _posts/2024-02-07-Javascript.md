@@ -81,9 +81,23 @@ let age=18，uname=“张三”
 
 console.log(age, uname)
 
+数组
 
+array，一种将一组数据存储再单个变量名下的优雅方式
 
+let arr = [小h，hh，hax]
 
+console.log(arr)
+
+取出数组元素
+
+console.log(arr[0])
+
+常量
+
+用const声明的变量称为 常量
+
+const pi = 3.14
 
 
 
