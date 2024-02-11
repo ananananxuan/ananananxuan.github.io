@@ -3,15 +3,15 @@ layout: mypost
 title: Javascript
 categories: [前端]
 ---
-Javascript
+# Javascript
 
 组成：ECMAscript+Web API（DOM+BOM）
 
-其中ECMAscript规定了js基础语法的核心知识，包括：变量、分支语句、循环语句、对象
+## ECMAscript规定了js基础语法的核心知识，包括：变量、分支语句、循环语句、对象
 
-
-
-Web APIs：DOM用于操作文档，对页面元素进行移动、大小、添加删除操作等；BOM用于操作浏览器，比如页面弹窗，检测窗口宽度、存储数据到浏览器
+## Web APIs：
+DOM用于操作文档，对页面元素进行移动、大小、添加删除操作等；  
+BOM用于操作浏览器，比如页面弹窗，检测窗口宽度、存储数据到浏览器
 
 书写位置：
 
@@ -98,7 +98,89 @@ console.log(arr[0])
 用const声明的变量称为 常量
 
 const pi = 3.14
+数据类型：
 
+基本数据类型
+
+number数字型   整数，小数，正数，负数
+
+string字符串型
+
+boolean布尔型
+
+undefined 未定义型
+
+null 空类型
+
+引用数据类型
+
+object对象
+
+js，弱数据类型，只有当我们赋值之后，才知道是什么数据类型
+
+算术运算符
+
++-*/，取余数%  （作用就是判断一个数能不能被整除）
+
+NaN:not a number
+
+字符串型
+
+一般用'单引号'
+
+转义符\'你好\'
+
+'hello'+'word'
+
+'hello'+19 字符串和数值拼接可以把数值变成字符串
+
+模板字符串
+
+let age = 19
+
+`我今年${age}岁了`
+
+布尔型
+
+表示肯定或者否定的时候用布尔型
+
+要么真要么假，真的是true，假的是false
+
+未定义类型 undefined
+
+只声明没赋值就是undefined，因为js是弱数据类型
+
+空类型
+
+let obj = null 给对象赋值了，但是为空值
+
+检测数据类型
+
+typeof x
+
+转换数据类型
+
+隐式转换
+
+当+号前后有一个字符串就会把另一个也转换成字符串
+
+但+'123'会变成数值型，
+
+当-*/号前后有一个数值就会把所有的东西转换成数值
+
++promp('请输入：')将输入的值转换成数值
+
+显示转换
+
+转换成数字型 
+
+Number()
+
+parselnt()只保留整数
+
+parseInt('12px')
+
+parseFloat()保留浮点数
 
 
 
