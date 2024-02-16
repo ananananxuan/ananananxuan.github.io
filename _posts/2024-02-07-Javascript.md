@@ -299,14 +299,114 @@ i<=arr.length-1或者i<arr.length
 while(true)可用来构造无限循环的案例,使用break来退出循环<br>
 for(;;)用来构造无限循环<br>
 
+```
+while(true){
+	let word = prompt("今天开心了吗？请回答开心或者不开心")
+	if(word == "开心"){
+	  break
+	}
+  }
+```
+⭐<br>
+当明确循环次数的时候，一般用for<br>
+当不明确循环次数的时候，一般用while<br>
 
+<strong>for循环的嵌套 </strong>
+```
+for（外部声明记录循环次数的变量;循环条件；变量变化量）{
+	for（内部声明记录循环次数的变量;循环条件；变量变化量）{
+	}
+}
+```
+```
+for(let i = 1; i<=3;i++){
+	document.write(`第${i}天<br>`)
+	for(let j =1;j<=5;j++){
+	  document.write(`记住了第${j}个单词<br>`)
+	}
+  }
+  ```
+<h3>十二、数组</h3>
+array是一种可以按照顺序保存数据的数据类型<br>
+可以用一个变量储存多个数据，数据类型可以是任意的<br>
+1.声明数组的方法
+```
+let arr = [1,2,"hax"]
+```
+2.数组求和以及平均值
+```
+let arr = [2, 6, 1, 7, 4]
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i]
+    }
+    document.write(`平均数是${sum / arr.length}`)
+```
+3.数组中的最大值和最小值
+```
+let arr = [2, 6, 1, 7, 4];
+let min = arr[0];
+for (let i = 1; i < arr.length; i++) {
+  if (arr[i] < min) {
+    min = arr[i];
+  }
+}
+document.write(`最小值是${min}`)
+```
+4.数组的增
+```
+let arr=[]
+arr[0]=1
+arr[1]=2
+arr.push()加在数组的末尾（一个或多个元素）
+arr.unshif()加在数组的开头（一个或多个元素）
+```
 
-
-
-
-
-
-
-
-
-
+5.数组的改
+```
+let arr=[1,2,3]
+arr[0]=2
+```
+6.所有元素的修改
+```
+let arr = [2, 6, 1, 7, 4]
+    for (let i = 0; i < arr.length; i++) {
+      document.write(arr[i]+'老师<br>')
+    }
+```
+7.数组的筛选
+```
+let arr = [2, 6, 1, 7, 4]
+    let arrnew = []
+    for (let i = 0; i < arr.length; i++) {
+      if(arr[i]>=5){
+        arrnew.push(arr[i])
+      }
+    }
+    document.write(arrnew)
+```
+8.数组的删除
+```
+arr.pop()删除最后一个元素，返回该元素的值
+arr.shift()删除第一个元素，返回该元素的值
+arr.splice(起始位置，删除几个元素）
+```
+9.冒泡排序
+```
+let arr = [5, 4, 3, 2, 1]
+    let t = 0
+    for (let i = 0; i < arr.length - 1; i++) {
+      for (j = 0; j < arr.length - i - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
+          t = arr[j]
+          arr[j] = arr[j + 1]
+          arr[j + 1] = t
+        }
+      }
+    }
+    document.write(arr)
+```
+or
+```
+arr.sort()
+```
