@@ -410,3 +410,217 @@ or
 ```
 arr.sort()
 ```
+
+<h3>十三、函数</h3>
+作用：抽取和封装
+
+1.声明
+```
+function 函数名(){
+	函数体
+}
+```
+2.调用
+```
+函数名()
+```
+函数的特点：带小括号
+
+3.函数的传参 形参
+```
+function 函数名(参数1，参数2){
+	函数体
+}
+函数名(a,b)实参
+
+function getSum(arr) {
+      let s = 0
+      for (let i = 0; i < arr.length; i++) {
+        s += arr[i]
+      }
+      document.write(s)
+    }
+    getSum([1, 3, 4, 5])
+    ```
+4.函数的返回值
+```
+function getSum(arr) {
+      let s = 0
+      for (let i = 0; i < arr.length; i++) {
+        s += arr[i]
+      }
+      return s
+    }
+    let sum = getSum([1, 3, 4, 5])
+    document.write(sum)
+```
+找个变量等于返回值，再打印
+
+5.作用域
+定义：一段代码中所用到的名字并不总是有效和可用的，限定这个名字的可用性的代码范围就是这个名字的作用域。
+作用域的使用提高了程序的逻辑的局部性，增强了程序的可靠性，减少了名字的冲突。<br>
+全局变量 全局作用域 <br>
+局部变量 局部作用域<br>
+访问原则：在能够访问到的情况下，先局部，后全局。按照就近原则<br>
+
+6.匿名函数(和具名函数相比较)
+```
+Function(){
+
+ }
+ ```
+使用方式：<br>
+①函数表达式，将匿名函数赋值给一个变量，通过变量名称进行调用
+```
+Let fn=function(){
+
+}
+②调用方式：fn()
+```
+不同点在于，匿名函数不能在声明函数之前调用
+立即执行函数 <br>
+防止代码污染，注意要加； 
+```
+(function(){
+Let num = 10
+})();
+
+(function(){
+Let num = 20
+})();
+(function(){}())；
+``` 
+7.逻辑中断
+``` 
+ function fn(x, y) {
+      x = x || 0
+      y = y || 0
+      console.log(x + y)
+    }
+    fn()
+    ``` 
+相当于 形参里x=0，y=0
+Console.log(false && i++)
+后面的i++直接不执行
+Console.log(11 && 22)
+如果前后都是true，则返回最后一个真值
+
+Console.log(true || i++)
+后面的i++也不执行
+Console.log(11 || 22)
+如果前后都是true，则返回第一个真值
+
+转换为布尔型
+0、undefined、null、false、NaN、""转换为布尔型是false
+其他都是true
+隐式转换:
+1.有字符串的加法“”+1，结果是“1”
+2.减法-(像大多数数学运算一样)只能用于数字，它会使空字符串""转换为 0
+3.null 经过数字转换之后会变为 0
+4.undefined 经过数字转换之后会变为 NaN
+
+对象object
+是一种数据类型，是一种无序的数据集合,可以详细的描述某个事物
+
+
+let obj = {
+      uname: "hax",
+      age: 26,
+      gender: "female"
+    }
+
+1.声明对象
+Let 对象名= {}
+2.组成：属性和方法
+属性：是特征
+方法：功能和行为(函数)
+3.对象的操作：增删改查
+查找：对象.属性 进行访问 或者对象[`属性`]
+改动：对象 .属性=新值
+增加：对象.属性=新值
+删除：delete 对象.属性
+4.对象的方法
+
+let obj = {
+      uname: "hax",
+      age: 26,
+      gender: "female",
+      sing: function(){
+        console.log("冰雨")
+      }
+    }
+在对象外面叫函数，在对象里面叫方法
+对象.方法()
+5.遍历对象
+For in
+
+let obj = {
+      uname: "hax",
+      age: 26,
+      gender: "female",
+      sing: function(){
+        console.log("冰雨")
+      }
+    }
+   for (let k in obj){
+      document.write(obj[k])
+    }
+6.数组对象
+
+let arr = [
+      { uname: "hax", age: "26" },
+      { uname: "lll", age: "22" }
+    ]
+for (let i = 0; i < arr.length; i++) {
+      document.write([i].uname)
+    }
+
+7.内置对象
+如Math
+可去mdn上查找方法
+包含的方法有：
+random：生成0-1之间的随机数[0,1)
+Ceil：向上取整
+floor：向下取整
+max：找到最大数
+min：找到最小数
+pow：幂运算
+abs：绝对值
+取0-10整数：
+
+Math.floor(Math.random()*11)
+
+生成N-M之间的随机数：
+
+Math.floor(Math.random()*(M-N+1))+N
+（可将其封装为一个函数）
+
+
+function getNum(M, N) {
+      return Math.floor(Math.random() * (N - M + 1)) + M
+    }
+    let num1 = getNum(1, 10)
+    let flag = false  //开关变量
+    while (true) {
+      let num2 = +prompt("请猜一个1-10之间的整数：")
+      if (num1 > num2) {
+        alert("您猜小啦")
+      } else if (num1 < num2) {
+        alert("您猜大啦")
+      } else {
+        alert("您猜对啦")
+        flag = false
+        break
+      }
+    }
+    if(flag){
+      alert('您的次数用完啦')
+    }
+
+
+8.null是空对象
+
+
+基本数据类型和引用数据类型
+简单类型又叫做基本数据类型或者值类型，存储的是值，如str，number，Boolean，undefined，null，栈
+复杂类型又叫做引用类型，存储的是地址，如object，array堆
