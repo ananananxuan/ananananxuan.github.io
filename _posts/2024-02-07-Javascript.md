@@ -511,7 +511,7 @@ Console.log(true || i++)
 Console.log(11 || 22)
 如果前后都是true，则返回第一个真值<br>
 
-<h3>转换为布尔型</h3>
+<h3>十四、转换为布尔型</h3>
 0、undefined、null、false、NaN、""转换为布尔型是false,其他都是true  <br>
 隐式转换: <br>
 1.有字符串的加法“”+1，结果是“1” <br>
@@ -519,7 +519,7 @@ Console.log(11 || 22)
 3.null 经过数字转换之后会变为 0 <br>
 4.undefined 经过数字转换之后会变为 NaN <br>
 
-<h3>对象object</h3>
+<h3>十五、对象object</h3>
 是一种数据类型，是一种无序的数据集合,可以详细的描述某个事物
 ``` 
 let obj = {
@@ -576,28 +576,28 @@ let arr = [
 for (let i = 0; i < arr.length; i++) {
       document.write([i].uname)
     }
-    ```
-7.内置对象
-如Math
-可去mdn上查找方法
-包含的方法有：
-random：生成0-1之间的随机数[0,1)
-Ceil：向上取整
-floor：向下取整
-max：找到最大数
-min：找到最小数
-pow：幂运算
-abs：绝对值
+```
+<h5>7.内置对象</h5>
+如Math <br>
+可去mdn上查找方法  <br>
+包含的方法有：<br>
+random：生成0-1之间的随机数[0,1)<br>
+Ceil：向上取整<br>
+floor：向下取整<br>
+max：找到最大数<br>
+min：找到最小数<br>
+pow：幂运算<br>
+abs：绝对值<br>
 取0-10整数：
-
-Math.floor(Math.random()*11)
-
+```
+math.floor(Math.random()*11)
+```
 生成N-M之间的随机数：
-
-Math.floor(Math.random()*(M-N+1))+N
-（可将其封装为一个函数）
-
-
+```
+math.floor(Math.random()*(M-N+1))+N
+```
+⭐生成M-N之间的随机数
+```
 function getNum(M, N) {
       return Math.floor(Math.random() * (N - M + 1)) + M
     }
@@ -618,11 +618,9 @@ function getNum(M, N) {
     if(flag){
       alert('您的次数用完啦')
     }
+```
 
-
-8.null是空对象
-
-
-基本数据类型和引用数据类型
-简单类型又叫做基本数据类型或者值类型，存储的是值，如str，number，Boolean，undefined，null，栈
-复杂类型又叫做引用类型，存储的是地址，如object，array堆
+<h5>8.null是空对象</h5>
+基本数据类型和引用数据类型<br>
+简单类型又叫做基本数据类型或者值类型，存储的是值，如str，number，Boolean，undefined，null，栈 <br>
+复杂类型又叫做引用类型，存储的是地址，如object，array堆 <br>
