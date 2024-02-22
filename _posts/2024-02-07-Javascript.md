@@ -441,7 +441,7 @@ function getSum(arr) {
       document.write(s)
     }
     getSum([1, 3, 4, 5])
-    ```
+```
 4.函数的返回值
 ```
 function getSum(arr) {
@@ -498,7 +498,7 @@ Let num = 20
       console.log(x + y)
     }
     fn()
-    ``` 
+``` 
 相当于 形参里x=0，y=0
 Console.log(false && i++)
 后面的i++直接不执行
