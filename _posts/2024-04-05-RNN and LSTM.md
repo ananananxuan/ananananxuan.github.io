@@ -1,11 +1,11 @@
 ---
 layout: mypost
-title: RNN
+title: RNN and LSTM
 categories: [深度学习]
 extMath: true
 ---
 
-RNN 循环神经网络
+# RNN 循环神经网络
 recurrent neural network (RNN)
 
 优点：可以处理长度可变的序列输入，因此非常符合处理语言这类序列型的数据。
@@ -27,3 +27,10 @@ recurrent neural network (RNN)
 应用场景
 ![RNN](RNN application.png)
 ![RNN](RNN application2.png)
+
+# LSTM 长短期记忆
+
+LSTM 是一种特殊的 RNN，可以解决梯度消失和梯度爆炸的问题。
+long short-term memory (LSTM)
+
+LSTM 是一种特殊的 RNN，可以解决梯度消失和梯度爆炸的问题。
