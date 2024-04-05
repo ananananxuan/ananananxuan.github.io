@@ -15,7 +15,7 @@ recurrent neural network (RNN)
 缺点：
 前面的信息在传递到后面的同时，信息权重下降，导致重要信息丢失
 ![RNN](disadvantage.png)
-
+ 
 
 1. 梯度消失
 2. 梯度爆炸
