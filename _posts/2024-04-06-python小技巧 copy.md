@@ -25,4 +25,9 @@ extMath: true
     date.weekday
 
 ```
+## 4.字符串格式化
+```
+    "你好{}".format(i) for i in range(5)
+  
+```
 
