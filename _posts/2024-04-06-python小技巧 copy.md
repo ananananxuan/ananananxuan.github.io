@@ -123,5 +123,5 @@ class MilkCat(Cat):
     import 包名.模块名  #只导入包里所包涵的模块
 ```
 发布包
-[https://www.bilibili.com/video/BV1jt411L7zE?p=83&vd_source=917336f407022762079ae1d9a0b669fd]https://www.bilibili.com/video/BV1jt411L7zE?p=83&vd_source=917336f407022762079ae1d9a0b669fd
+[压缩包发布包的视频操作指导](https://www.bilibili.com/video/BV1jt411L7zE?p=83&vd_source=917336f407022762079ae1d9a0b669fd)
 
