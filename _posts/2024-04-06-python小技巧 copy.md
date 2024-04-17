@@ -40,7 +40,7 @@ extMath: true
 
 ```
     class Cat:
-        def __init__(self,name):
+        def __init__(self,name): #其中self指代实例化的对象本身·
             self.name = name #类实例化之后会自动调用初始化方法
         def eat(self):
             print(self.name + " is eating")
