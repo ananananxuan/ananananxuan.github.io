@@ -8,6 +8,8 @@ extMath: true
 ## 1.列表生成式
 ```
 [i for i in range(10)]
+
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
     
 ## 2.匿名函数
@@ -27,9 +29,39 @@ extMath: true
 ```
 ## 4.字符串格式化
 ```
-    "你好{}".format(i) for i in range(5)
+    ["你好{}".format(i) for i in range(5)]
   
 ```
+格式说明符
+```
+    %s  #字符串
+    %d  #整数
+    %f  #浮点数
+    %y  #年
+    %m  #月
+    %%  #文本百分比
+    print("%s is %d years old" % ("Tom",20))
+
+```
+转义序列
+```
+    \n  #换行
+    \t  #制表符
+    \r  #回车
+    \b  #退格
+    \a  #响铃
+    \v  #垂直制表符
+    \'  #单引号
+    \''  #双引号
+    \\  #反斜杠
+
+    fout.write("%s\t%s\n"%(curr_url,title))
+
+```
+
+    
+
+  
 
 ## 5.面向对象
 
@@ -124,4 +156,36 @@ class MilkCat(Cat):
 ```
 发布包
 [压缩包发布包的视频操作指导](https://www.bilibili.com/video/BV1jt411L7zE?p=83&vd_source=917336f407022762079ae1d9a0b669fd)
+
+## 8.文件
+
+文件读写
+```
+    with open(文件名,模式) as 文件对象:
+        文件对象.read()  #读取文件内容
+        文件对象.write()  #写入文件内容
+```
+
+文件读写模式
+```
+    r  #读模式
+    w  #写模式
+    a  #追加模式
+    rb  #二进制读模式
+    wb  #二进制写模式
+
+```
+
+如果有文件则打开，没有文件则创建一个新文件
+file = open("文件名",模式)
+file.close()  #文件自动关闭
+
+```
+fout = open('output.txt','w',encoding='utf-8')
+fout.flush() #刷新文件
+fout.write('hello world')
+fout.close()
+```
+
+
 
