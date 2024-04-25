@@ -186,6 +186,20 @@ fout.flush() #刷新文件
 fout.write('hello world')
 fout.close()
 ```
+## 9.os
+```
+import os
+os.getcwd()  #获取当前工作目录 %pwd
+os.chdir('路径')  #改变当前工作目录 %cd
+os.listdir('路径')  #列出指定路径下的所有文件和文件夹 %ls -l
+os.mkdir('路径')  #创建文件夹 %mkdir
+os.rmdir('路径')  #删除文件夹 %rmdir
+os.rename('原文件名','新文件名')  #重命名文件
+os.remove('文件名')  #删除文件 %rm('文件名')
+os.path.exists('路径')  #判断路径是否存在
+os.path.join('路径','文件名')  #拼接路径 %join('路径','文件名')
+
+
 
 
 
