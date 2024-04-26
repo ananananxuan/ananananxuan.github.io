@@ -100,14 +100,24 @@ b[::2]
 
 子类继承父类时，当父类的方法不能完全满足子类的需求，可以先写一下新的方法，再通过super()调用父类的方法
 ```
-class MilkCat(Cat):
-        
-        def eat(self):
-            print("cats like milk")
-            super().eat()
-            
-    cat2 = MilkCat("Jerry")
-    cat2.play()
+class Cat:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def eat(self):
+        print("{} is eating fishes".format(self.name))
+    def __len__(self):
+        return len(self.name)
+
+class OrangeCat(Cat):
+    def __init__(self, name, age, weight):
+        super().__init__(name, age) #继承父类的一些属性
+        self.weight = weight
+        print("orangecat is so heavy with weight to %.1f"%self.weight)
+    def __miao__(self):
+        print("orangecat %s is miaomiao"%self.name)
+
+diandian = OrangeCat("diandian", 3, 5)
 ```
 
 ## 6.模块
@@ -140,7 +150,7 @@ class MilkCat(Cat):
         pass
 
     if __name__ == "__main__":
-        main()
+        测试代码
 ```
 这样就不会在别人调用这个模块的时候执行测试代码了          
 
@@ -155,7 +165,7 @@ class MilkCat(Cat):
 ```
 
 ```
-    import 包名 #可以将包里所包涵的模块全部导入
+    import 包名 #可以将包里所包含的模块全部导入
     import 包名.模块名  #只导入包里所包涵的模块
 ```
 发布包
@@ -165,7 +175,7 @@ class MilkCat(Cat):
 
 文件读写
 ```
-    with open(文件名,模式) as 文件对象:
+    with open(文件名,模式,encoding='utf-8') as 文件对象:
         文件对象.read()  #读取文件内容
         文件对象.write()  #写入文件内容
 ```
@@ -195,13 +205,14 @@ fout.close()
 import os
 os.getcwd()  #获取当前工作目录 %pwd
 os.chdir('路径')  #改变当前工作目录 %cd
-os.listdir('路径')  #列出指定路径下的所有文件和文件夹 %ls -l
+os.listdir('路径')  #列出指定路径下的所有文件和文件夹 %ls
+os.system('命令')  #执行系统命令 %run
 os.mkdir('路径')  #创建文件夹 %mkdir
 os.rmdir('路径')  #删除文件夹 %rmdir
 os.rename('原文件名','新文件名')  #重命名文件
 os.remove('文件名')  #删除文件 %rm('文件名')
 os.path.exists('路径')  #判断路径是否存在
-os.path.join('路径','文件名')  #拼接路径 %join('路径','文件名')
+os.path.join('路径','文件名')  
 ```
 
 ## 10.jupyter notebook 中一些命令
@@ -212,6 +223,11 @@ os.path.join('路径','文件名')  #拼接路径 %join('路径','文件名')
 !python hello_world.py
 !python "../hello_world.py"
 
+```
+```
+%%time #放在多行代码块的开始处，可计算这个单元格的运行时间
+
+%run #相当于！python hello_world.py
 ```
 
 如果代码太长了
@@ -228,6 +244,8 @@ a = {'name':'Tom','age':20,'gender':'male'}
     a.items()  #获取字典中所有的键值对
     a.pop(键)  #删除指定的键值对
     a.popitem()  #随机删除一个键值对
+
+    pd.DataFrame([a]) #将字典转化为dataframe的方法
 
 ```
 ## 12.集合
