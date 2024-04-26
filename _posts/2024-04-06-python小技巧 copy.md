@@ -64,11 +64,7 @@ b[::2]
 
     fout.write("%s\t%s\n"%(curr_url,title))
 
-```
-
-    
-
-  
+``` 
 
 ## 5.面向对象
 
