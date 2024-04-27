@@ -226,9 +226,19 @@ os.path.join('路径','文件名')
 ```
 ```
 %%time #放在多行代码块的开始处，可计算这个单元格的运行时间
-
 %run #相当于！python hello_world.py
 ```
+
+在vscode或者pycharm中 
+```
+import time
+start_time = time.time()
+xxxxx
+end_time = time.time()
+print("运行时间：",end_time - start_time)
+```
+    
+
 
 如果代码太长了
 可以用+ \ 换行写
