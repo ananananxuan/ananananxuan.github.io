@@ -305,10 +305,10 @@ a = "hello world"
 ## 16.随机数函数
 ```
 import random
-random.randint(a,b)  #生成a到b之间的随机整数
-random.randrange(a,b,c)  #生成a到b之间以c为步长的随机整数
-random.random()  #生成0到1之间的随机浮点数
-random.uniform(a,b)  #生成a到b之间的随机浮点数
+random.randint(a,b)  #生成一个[a,b]的随机整数
+random.randrange(a,b,c)  #生成[a,b)以c为步长的随机整数
+random.random()  #生成[0,1)的随机浮点数
+random.uniform(a,b)  #生成[a,b]的随机浮点数
 random.choice(列表)  #从列表中随机选择一个元素
 random.shuffle(列表)  #将列表中的元素随机打乱
 
