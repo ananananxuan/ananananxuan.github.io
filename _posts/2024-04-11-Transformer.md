@@ -31,6 +31,37 @@ https://zhuanlan.zhihu.com/p/48508221
 ![self-attention](sa2.png)
 
 
-自注意力机制：
+## Encoder和Decoder
+
+### Encoder
+
+#### 1.输入部分
+![encoder](encoders.png)
+
+- Embedding
+![embedding](embedding.png)
+
+- 位置编码
+
+Transformer相对于RNN来说，可以同时处理多个字/词。能够提高处理速度，但相对的也会忽略时间上的依赖关系。因此需要我们进行位置编码。
+
+![position](position.png)
+![image](image.png)
+
+#### 2.注意力机制
+- 基本注意力机制
+Attention(Q,K,V)=softmax(QK^T/sqrt(d_k))V
+![self-attention](self_attention.png)
+
+- 在Transformer中如何操作
+
+
+#### 3.前馈神经网络
+
+#### Decoder
+![decoder](decoders.png)
+
+
+## 代码实现
 
 
