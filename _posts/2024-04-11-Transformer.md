@@ -48,20 +48,28 @@ Transformer相对于RNN来说，可以同时处理多个字/词。能够提高�
 ![position](position.png)
 ![image](image.png)
 
-#### 2.注意力机制
+#### 2.多头注意力机制
 - 基本注意力机制
 Attention(Q,K,V)=softmax(QK^T/sqrt(d_k))V
 ![self-attention](self_attention.png)
 
 - 在Transformer中如何操作
+layer normalization
 
 
 #### 3.前馈神经网络
+输出的Z1和Z2经过Feed Forward再 Add & Normalize
 
-#### Decoder
-![decoder](decoders.png)
+![feed-forward](forward.png)
 
 
-## 代码实现
+### Decoder
+![decoder](decoder.png)
+
+
+![encoder & decoder](image2.png)
+
+
+
 
 
