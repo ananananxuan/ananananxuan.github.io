@@ -73,3 +73,64 @@ layer normalization
 
 
 
+
+
+
+# Transformer 流程
+
+## tokenizer 切词器
+![tokenizer](tokenizer.png)
+
+可以从Hugging Face的Tokenizer库中找到
+
+
+具体代码
+```
+from tokenizers import (
+  models,
+  normalizers,
+  pre_tokenizers,
+  trainers,
+  Tokenizer,
+)
+
+tokenizer = Tokenizer(models.WordPiece(unk_token="[UNK]"))
+# 切词，并把字典中没有出现的字转化成[UNK]
+
+tokenizer.normalizer = normalizers.Sequence([normalizers.NFD(), normalizers.Lowercase()]) # 统一转换为小写,NFD是Unicode Normalization Form D
+
+# 添加预处理分词器
+tokenizer.pre_tokenizer = pre_tokenizers.WhitespaceSplit()# 按照不可见字符进预拆分
+
+special_tokens = ["[UNK]", "[SEP]", "[PAD]", "[CLS]","[MASK]"] # 添加特殊字符
+
+trainer = trainers.WordPieceTrainer(vocab_size=10000, special_tokens=special_tokens) # 训练模型
+
+tokenizer.train(['./train.txt'], trainer=trainer)
+tokenizer.save("./tokenizer.json")
+```
+
+这样就可以实现丢进去训练数据，对训练数据文本进行切词，且给每个词一个编码，类似于字典
+
+接着调用我们训练好的模型
+```
+from tokenizers import Tokenizer
+
+tokenizer = Tokenizer.from_file("./tokenizer.json")
+
+# 输入文本
+text = "你好，世界！"
+
+# 编码
+encoded = tokenizer.encode(text)
+
+# 解码
+decoded = tokenizer.decode(encoded.ids)
+
+print(encoded.ids, decoded)
+```
+
+
+## 数据预处理
+
+### 1.数据清洗
